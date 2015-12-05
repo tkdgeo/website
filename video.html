@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8" />
+		<link rel="stylesheet" href="style.css" />
+		<title> Audio et video </title> 
+	<head>
+	
+	<body>
+		<header>
+			<h1 id = "debut"> La video et l'audio </h1>
+		</header>
+		
+		
+		<section>
+			<aside>
+				<nav>
+					<ul>
+						<li> <a href = "test.html"> Accueil </a> </li>
+						<li> <a href = "page.html"> La page </a> </li>
+						<li> <a href = "Dossier/l'autre_page.html"> L'autre page </a> </li>
+						<li> <a href = "liens.html"> Les liens </a> </li>
+						<li> <a href = "deco.html"> Les decorations et la couleur </a> </li>
+						<li> <a href = "fond.html"> Le fond </a> </li>
+						<li> <a href = "bordures.html"> Les bordures </a> </li>
+						<li> <a href = "mise.html"> La mise en page </a> </li>
+						<li> <a href = "boite.html"> Le modele des boites </a> </li>
+						<li> <a href = "position.html"> Le positionnement </a> </li>
+						<li> <a href = "tableaux.html"> Les tableaux </a> </li>
+						<li> <a href = "formulaire.html"> Les formulaires </a> </li>
+						<li> <a href = "video.html"> La video et l'audio </a> </li>
+						<li> <a href = "media.html"> Les media queries </a> </li>
+						<li> <a href = "loin.html"> Pour aller plus loin </a> </li>
+						<li> <a href = "web.html"> Envoyer sur le web </a> </li>
+					</ul>
+				</nav>
+			</aside>
+			
+			<article>
+				<h2> Les formats audio </h2>
+					<p>
+						Ils en existe une multitude mais les plus repandus sont le MP3, l'AAC (apple), l'OGG (linux) et WAV (a eviter car non compresse).
+						Petit recapitulatif de leur compatibilite avec les navigateurs :
+						<br />
+						<img src = "audio.png" alt = "compatibilite formats/navigateurs" />
+						<br />
+						Il faudra alors proposer plusieur format au navigateur et il decidera lequel il pourra lire.
+					</p>
+				
+				<h2> Les formats video </h2>
+					<p>
+						c'est plus complexe, on a besoin de trois elements :
+						<ul>
+							<li> Un format conteneur : comme une boite qui va contenir les 2 elements suivants. On le reconnait souvent avec l'extension
+							du fichier : AVI, MP4, MKV... </li>
+							<li> Un codec audio : meme format que precedemment. </li>
+							<li> Un codec video : c'est le format qui va compresser les images. Les principaux a connaitre pour le web sont : "H.264"
+							(le plus puissant mais pas totalement gratuit, a utiliser avec prudence), "Ogg Theora" (gratuit mais moins puissant, probleme
+							de logiciel a telecharger sur windows) et "WebM" (gratuit et recent, concurrent le plus serieux de H.264 propose par google). </li>
+						</ul>
+						Pour la compatibilite : 
+						<br />
+						<img src = "video.png" alt = "compatibilite formats/navigateurs" />
+						<br />
+						On remarque que le H.264 est tout le temps compatible.
+					</p>
+				
+				<h2> Insertion d'un element audio </h2>
+					<p>
+						On utilise la balise "audio" avec les attributs suivants :
+						<ul>
+							<li> "src" avec le nom du fichier a jouer. </li>
+							<li> "controls" pour ajouter les boutons 'lecture', 'pause' et la bare de defilement. </li>
+							<li> "width" avec la largeur de l'outil de lecture audio. </li>
+							<li> "loop" pour jouer la musique en boucle. </li>
+							<li> "autoplay" pour jouer la musique automatiquement. </li>
+							<li> "preload" pour indiquer si la musique peut être préchargée dès le chargement de la page ou non. Avec la valeur "auto"
+							(par defaut, le navigateur choisi), "metadata" (charge uniquement les metadonnees comme la duree) ou "none" (pas de prechargement,
+							pour ne pas gaspiller de bande passante sur le site). </li>
+						</ul>
+						Felix Jaehn - Ain’t Nobody (Loves Me Better) ft. Jasmine Thompson
+						<br />
+						<audio src = "musique.mp3" controls width = "100%" >Mettez a jour votre navigateur pour pouvoir lire cette musique</audio>
+						<br />
+						On peut placer entre les balises un message a afficher lorsque le navigateur ne gere pas cette balise.
+						<br />
+						Pour mettre plusieurs fichier de type differents on utilise la syntaxe suivante en remplacant les "" par <> :
+						<br />
+						"audio control"<br />
+						"source src = "musique.mp3"
+						<br />
+						"source src = "musique.ogg"
+						<br />
+						"/audio"
+						<br />
+						Vous remarquerez qu'on ne ferme pas les balises "source" ni par "/>" ni par "/source".
+					</p>
+				
+				<h2> Insertion d'une video </h2>
+					<p>
+						On utilise la balise "video" avec les attributs suivants :
+						<ul>
+							<li> "poster" pour afficher une image a la place de la video tant que celle-ci n'est pas lancee.
+							Par defaut, le navigateur prend la 1ere image de la video. </li>
+							<li> "controls" idem audio. </li>
+							<li> "width" idem audio.</li>
+							<li> "height" pour la hauteur de la video. </li>
+							<li> "loop" idem audio. </li>
+							<li> "autoplay" idem audio.</li>
+							<li> "preload" idem audio. </li>
+						</ul>
+						Remarques : On ne peut pas precharger une video, c'est toujours le navigateur qui decide. Et les proportions
+						sont toujours respectees, sans depasser du cadre impose.
+						<br />
+						Felix Jaehn - Ain’t Nobody (Loves Me Better) ft. Jasmine Thompson :
+						<br />
+						<video src = "video.mp4" controls poster = "img_video.png" width = "100%" ></video>
+						<br />
+						Meme structure pour les formats video que pour les formats audio. Et meme remarques.
+						<br />
+						Par ailleurs, Les iPhone, iPad et iPod ne reconnaissent à l'heure actuelle que le format H.264 (fichier .mp4)…
+						et uniquement si celui-ci apparaît en premier dans la liste ! Je vous recommande donc d'indiquer le format H.264
+						en premier pour assurer une compatibilité maximale.
+					</p>
+				
+			</article>
+		</section>
+		
+		<footer>
+			<p>
+				<a href = "#debut" class = "haut">Haut de page</a>
+			</p>
+			<p>
+				Site d'aide pour codage HTML5 et CSS3 realise par Moi Même.
+			</p>
+			<p class = "accueil">
+				<a href = "test.html"> <img src = "accueil.gif" alt = "accueil" /> </a>
+			</p>
+		</footer>
+		
+	</body>
+</html>

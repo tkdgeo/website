@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8" />
+		<link rel="stylesheet" href="style.css" />
+		<title> Positionnement </title> 
+	<head>
+	
+	<body>
+		<header>
+			<h1 id = "debut"> Le positionnement </h1>
+		</header>
+		
+		
+		<section>
+			<aside>
+				<nav>
+					<ul>
+						<li> <a href = "test.html"> Accueil </a> </li>
+						<li> <a href = "page.html"> La page </a> </li>
+						<li> <a href = "Dossier/l'autre_page.html"> L'autre page </a> </li>
+						<li> <a href = "liens.html"> Les liens </a> </li>
+						<li> <a href = "deco.html"> Les decorations et la couleur </a> </li>
+						<li> <a href = "fond.html"> Le fond </a> </li>
+						<li> <a href = "bordures.html"> Les bordures </a> </li>
+						<li> <a href = "mise.html"> La mise en page </a> </li>
+						<li> <a href = "boite.html"> Le modele des boites </a> </li>
+						<li> <a href = "position.html"> Le positionnement </a> </li>
+						<li> <a href = "tableaux.html"> Les tableaux </a> </li>
+						<li> <a href = "formulaire.html"> Les formulaires </a> </li>
+						<li> <a href = "video.html"> La video et l'audio </a> </li>
+						<li> <a href = "media.html"> Les media queries </a> </li>
+						<li> <a href = "loin.html"> Pour aller plus loin </a> </li>
+						<li> <a href = "web.html"> Envoyer sur le web </a> </li>
+					</ul>
+				</nav>
+			</aside>
+			
+			<article>
+			<h2> Le positionnement flottant </h2>
+				<p>
+					Ceci n'est pas la meilleur facon de faire mais elle est couramment utilisee. 
+					On utilise la propriete "float", la meme qui nous a permis de faire flotter le texte autour d'une image, 
+					alors qu'elle n'a pas ete concu pour ca.
+					<br />
+					Ensuite on utilise les <a href = "bordures.html">bordures</a> et <a href = "boite.html">le modele des
+					boites</a> pour l'agencement de maniere plus esthetique.
+					<br />
+					A l'inverse, pour qu'un element se place obligatoirement sous le menu il faut utiliser "clear: both;" qu'on a deja vu.
+				</p>
+		
+			<h2> Transformer ses elements avec display </h2>
+				<p>
+					La propriete "display" permet de transformer n'importe quel element en un autre type. Par exemple, un lien est transforme en bloc.
+					<br />
+					Voici quelques-unes des principales valeurs que peut prendre la propriété display en CSS (il y en a encore d'autres) :
+					<ul>
+						<li> "inline" pour a, em, span... : elements d'une ligne. Se placent les uns a cote des autres. </li>
+						<li> "block" pour p, div, section... : elements en forme de bloc. Se placent les uns en dessous des autres et peuvent etre redimensionnes </li>
+						<li> "inline-block" pour select, input : elements positionnes les uns a cote des autres (comme les inlines) mais qui peuvent etre redimensionnes (comme les blocs). </li>
+						<li> "none" pour head : elements non affiches. </li>
+					</ul>
+					<br />
+					On peut ainsi masquer completement un element de la page, il suffit d'ecrire : "display: none;". Pour les faire apparaitre par la suite, il faudra utiliser JavaScript.
+					Cela sert pour masquer les sous-menus qui ne s'affiche seulement lorsque qu'on parcourt les menus. 
+				</p>
+				
+				<p>
+					Le type "inline-block" est un melange de inlines et de blocs.
+					<br />
+					Des qu'il y a plus d'un menu a affiche les floats sont mal geres et le recours a "clear: both;" complexifie le code de la page. C'est pour cela qu'on utilise "display: inline-block;".
+					Cela va mettre nos bloc sur une meme ligne donc il faudra redefinir la ligne de base (baseline) avec la propriete "vertical-align" qui peut prendre les valeurs suivantes :
+					<ul>
+						<li> "baseline" : alignement de la base de l'element avec celle de l'element parent (par defaut) </li>
+						<li> "top" : aligne en haut </li>
+						<li> "middle" : centre verticalement </li>
+						<li> "bottom" : aligne en bas </li>
+						<li> valeur en px ou % : aligne a une certaine distance de la ligne de base (baseline) </li>
+					</ul>
+					Attention, mal gere par internet explorer. Ce reporter <a href = "https://openclassrooms.com/courses/apprenez-a-creer-votre-site-web-avec-html5-et-css3/le-positionnement-en-css">ici</a>
+				</p>
+		
+			<h2> Les positionnements absolu, fixe et relatif </h2>
+				<p>
+					On utilise la propriete "position" avec :
+					<ul>
+						<li> "absolute" : permet de placer n'importe ou l'element </li>
+						On utilise ensuite 4 proprietes CSS : "left", "right", "top" et "bottom". On peut leur donner une valeur en px ou en %.
+						Voyer par vous meme : <a href = "position.png"> <img src = "tn_position.png" alt = "positionnement absolu" /></a>
+						<br />
+						Les éléments positionnés en absolu sont placés par-dessus le reste des éléments de la page ! Il faut utiliser la propriete <strong>z-index</strong> avec l'ordre d'affichage (1,2,3,...).
+						<img src = "priorite.png" alt= "representation des priorites" />
+						<li> "fixed" : idem absolu sauf que l'element reste toujours visible meme s'il on descend dans la page. </li>
+						<li> "relative" :permet de decaler l'element par rapport a sa position normale </li>
+						<img src = "relatif.jpg" alt = "posotion du point d'origine en relatif" />
+						<br />
+						Si vous appliquez une des propriétés top, left, right ou bottom, le texte sur fond rouge va se déplacer par rapport à la position où il se trouve.
+					</ul>
+				</p>
+			</article>
+		</section>
+		
+		<footer>
+			<p>
+				<a href = "#debut" class = "haut">Haut de page</a>
+			</p>
+			<p>
+				Site d'aide pour codage HTML5 et CSS3 realise par Moi Même.
+			</p>
+			<p class = "accueil">
+				<a href = "test.html"> <img src = "accueil.gif" alt = "accueil" /> </a>
+			</p>
+		</footer>
+	</body>
+</html>

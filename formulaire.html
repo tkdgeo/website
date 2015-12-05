@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8" />
+		<link rel="stylesheet" href="style.css" />
+		<title> Formulaire </title> 
+	<head>
+	
+	<body>
+		<header>
+			<h1 id = "debut"> Les formulaires </h1>
+		</header>
+		
+		
+		<section>
+			<aside>
+				<nav>
+					<ul>
+						<li> <a href = "test.html"> Accueil </a> </li>
+						<li> <a href = "page.html"> La page </a> </li>
+						<li> <a href = "Dossier/l'autre_page.html"> L'autre page </a> </li>
+						<li> <a href = "liens.html"> Les liens </a> </li>
+						<li> <a href = "deco.html"> Les decorations et la couleur </a> </li>
+						<li> <a href = "fond.html"> Le fond </a> </li>
+						<li> <a href = "bordures.html"> Les bordures </a> </li>
+						<li> <a href = "mise.html"> La mise en page </a> </li>
+						<li> <a href = "boite.html"> Le modele des boites </a> </li>
+						<li> <a href = "position.html"> Le positionnement </a> </li>
+						<li> <a href = "tableaux.html"> Les tableaux </a> </li>
+						<li> <a href = "formulaire.html"> Les formulaires </a> </li>
+						<li> <a href = "video.html"> La video et l'audio </a> </li>
+						<li> <a href = "media.html"> Les media queries </a> </li>
+						<li> <a href = "loin.html"> Pour aller plus loin </a> </li>
+						<li> <a href = "web.html"> Envoyer sur le web </a> </li>
+					</ul>
+				</nav>
+			</aside>
+			
+			<article>
+				<h2> Creer un formulaires </h2>
+				
+				<p>
+					On doit tout d'abord ecrire la balise "form" pour le debut et "/form" pour la fin. Il est obligatiore de mettre des balises de type BLOCK a l'interieur.
+					Mais alors deux problemes apparaissent :
+					<ul>
+						<li> Comment recevoir le texte saisi par le visiteur ? </li>
+						<li> Puis, une fois recu, comment les traiter ? </li>
+					</ul>
+					Il faut ajouter des attributs a "form" :
+					<ul>
+						<li> "method" pour le premier probleme : il indique comment vont etre envoye les donnees. Il prend la valeur "get" ou "post". "get" est peu adapte car
+						il est limite a 255 caracteres. Il est donc preferable d'utiliser "post" pour une plus grande quantite d'information. </li>
+						<li> "action" pour le deuxieme probleme : c'est l'addresse de la page ou du programme qui va traiter les informations. </li>
+					</ul>
+				</p>
+				
+				<h2> Les zones de saisie basiques </h2>
+				
+				<p>
+					Il y a deux zones de texte differente :
+					<ul>
+						<li> La zone de texte monoligne : "input /" avec des attributs differents en fonction de son emploi. </li>
+						<li> La zone de texte multiligne : "textarea" et "/textarea". </li>
+					</ul>
+				</p>
+				
+				<h3> Les zones de texte monoligne </h3>
+				<p>
+					On utilise la balise "input /" et on ajoute l'attribut "type" et "name". "type" prend la valeur "text" ou "password".
+					<br />
+					On peut ajouter un libelle avec "label" et "/label". Mais il faut alors lier le label a la zone de texte. Pour cela, on ajoute l'attribut "id" en plus de
+					"name" a "input /" et qui aura la meme valeur que l'attribut "for" du label. On remarque alors que le fait de cliquer sur le label place automatiquement 
+					le pointeur dans la zone de texte correspondante.	
+				</p>
+				
+				<form method = "post" action = "traitment.php">
+					<p>
+						<label for = "pseudo">Votre pseudo</label> : <input type = "text" name = "pseudo" id = "pseudo" />
+					</p>
+				</form>
+				
+				<p>
+					D'autre attributs pour "input /" :
+					<ul>
+						<li> "size" pour agrandir le champ de saisi. </li>
+						<li> "maxlength" pour limiter le nombre de caracteres que l'on peut saisir. </li>
+						<li> "value" pour pre-remplir le champ avec une valeur par defaut. </li>
+						<li> "placeholder" pour donner une indication sur le comptenu du champ. Celle ci disparaitra dès la saisi. </li>
+					</ul>
+					En voici un magnifique exemple :
+					<form method = "post" action = "traitment.php">
+						<p>
+							<label for = "pseudo">Votre pseudo :</label>
+							<input type = "text" name = "pseudo" id = "pseudo" size = "30" maxlength = "10" placeholder = "Ex : tkdgeo" />
+							<br />
+							<label for = "password">Votre mot de passe :</label>
+							<input type = "password" name = "password" id = "password" size = "30" maxlength = "10" />
+						</p>
+					</form>
+				</p>
+				
+				<h3> Les zones de texte multilignes </h3>
+				<p>
+					Comme nous l'avons deja vu, c'est avec la balise "textarea" et "/textarea". Elle a comme attributs "name"et "id" et on utilise un "label".
+					En voici un exemple :
+					<form>
+						<p>
+							<label for = "com">Commentaire :</label>
+							<textarea type = "text" name = "com" id = "com" /></textarea>
+						</p>
+					</form>
+					<br />
+					Pour en modifier la taille on utilise soit le CSS (avec "width" et "height") ou avec des attributs : "rows" (nombre de lignes) et "cols" (nombre de colonnes).
+					On peut pre-remplir la zone de saisi en ecrivant directement entre les balises d'ouverture et de fermeture et non plus avec l'attribut "value".
+					Voici le resultat :
+					<form>
+						<p>
+							<label for = "com">Commentaire :</label>
+							<textarea type = "text" name = "com" id = "com" rows = "10" cols = "50" />
+								Non mais vas-y petit gars, dis le, c'est qui le meilleur ? hein ? c'est qui le meilleur ? Bon ok c'est pas grave, on sait tres bien qui c'est que tu sais !
+							</textarea>
+						</p>
+					</form>
+				</p>
+				
+				<h2> Les zones de saisie enrichies </h2>
+				
+				<p>
+					Ces nouvelles fonctionnalites de HTML5 sont liees au type de champs. Il suffit donc de donner a l'attribut "type" de la balise "input /" une valeur differente.
+					En voici un petit recapitulatif :
+					<ul>
+						<li> E-mail : "email". Pas de modification apparente mais le navigateur peut afficher une indication si la saisi ne correspond pas a une adresse internet. Un clavier adapte sur certain navigateur (mobile notamment) peut aussi apparaitre </li>
+						<li> URL : "url". Pour une adresse absolue commencant generalement par http:// </li>
+						<li> Numero de telephone : "tel". </li>
+						<li> Nombre : "number". Il s'affiche en general avecc des petites fleches pour changer la valeur. On pourra aussi ajouter les attributs suivants : "min", "max" et "step" </li>
+						<li> Curseur : "range". Il permet de selectionner un nombre avec un curseur. On peut la aussi utiliser "min", "max" et "step". </li>
+						<li> Couleur : "color". Permet de saisir une couleur (peu utilise). </li>
+						<li> Date : "date". Par exemple 05/08/1985. </li>
+						<li> Heure : "time". Par exemple 13:37. </li>
+						<li> Date et Heure avec gestion du decalage horaire: "datetime". </li>
+						<li> Date et Heure sans gestion du decalage horaire: "datetime-local". </li>
+						<li> Semaine : "week". </li>
+						<li> Mois : "month". </li>
+						<li> Recherche : "search". C'est ensuite le navigateur qui choisi comment afficher le champ de recherche. </li>
+					</ul>
+					Pour les differents choix de date, peu de navigateur font la difference en dehors d'opera.
+				</p>
+				
+				<h2> Les elements d'options </h2>
+				
+				<h3> La cases a cocher </h3>
+				<p>
+					On utilise toujours la balise "input /" avec comme type "checkbox". Puis il faut placer le label a l'emplacement souhaite.
+					<br />
+					En voici un exemple :
+					<form>
+						<p>
+							Quelle langue voulez-vous utiliser :
+							<br />
+							<input type = "checkbox" name = "francais" id = "francais" checked /> <label for = "francais">Francais</label>
+							<br />
+							<input type = "checkbox" name = "anglais" id = "anglais" /> <label for = "anglais">Anglais</label>
+							<br />
+							<input type = "checkbox" name = "espagnol" id = "espagnol" /> <label for = "espagnol">Espagnol</label>
+							<br />
+							<input type = "checkbox" name = "japonais" id = "japonais" /> <label for = "japonais">Japonais</label>
+							<br />
+						</p>
+					</form>
+					Enfin, l'attribut "checked" sans valeur permet de cocher une case par defaut (comme precedemment le Francais).
+				</p>
+				
+				<h3> Les zones d'options </h3>
+				<p>
+					Ces zones permettent de faire un choix et un seul permi une liste de possibilites. On utilise toujours la balise "input /"
+					avec comme type "radio". Contrairement aux cases a cocher, elles sont organisees en groupes. Les options d'un meme groupe 
+					possede le meme nom ("name") mais chaque option doit avoir une valeur differente ("value").
+					En voici un exemple :
+					<form method="post" action="traitement.php">
+						<p>
+							Veuillez indiquer la tranche d'âge dans laquelle vous vous situez :<br />
+							<input type="radio" name="age" value="moins15" id="moins15" /> <label for="moins15">Moins de 15 ans</label><br />
+							<input type="radio" name="age" value="medium15-25" id="medium15-25" /> <label for="medium15-25">15-25 ans</label><br />
+							<input type="radio" name="age" value="medium25-40" id="medium25-40" /> <label for="medium25-40">25-40 ans</label><br />
+							<input type="radio" name="age" value="plus40" id="plus40" /> <label for="plus40">Encore plus vieux que ça ?!</label>
+						</p>
+						<p>
+							Sur quel continent habitez-vous ?<br />
+							<input type="radio" name="continent" value="europe" id="europe" /> <label for="europe">Europe</label><br />
+							<input type="radio" name="continent" value="afrique" id="afrique" /> <label for="afrique">Afrique</label><br />
+							<input type="radio" name="continent" value="asie" id="asie" /> <label for="asie">Asie</label><br />
+							<input type="radio" name="continent" value="amerique" id="amerique" /> <label for="amerique">Amérique</label><br />
+							<input type="radio" name="continent" value="australie" id="australie" /> <label for="australie">Australie</label>
+						</p>
+					</form>
+					On notera que cette fois l'"id" est different du nom car different pour chaque option.
+				</p>
+				
+				<h3> Les listes deroulantes </h3>
+				<p>
+					On utilise ici la balise "select" et "/select" avec l'attribut "name". Puis a l'interieur on place une balise "option" pour
+					chaque choix possible et ajoute a chacune d'elles un attribut "value" pour pouvoir identifier ce que le visiteur a choisi.
+					<br />
+					Par exemple :
+					<form method = "post" action = "traitement.php">
+						<p>
+							<label for = "pays">De quel pays vient-tu ?</label>
+							<br />
+							<select name = "pays" id = "pays">
+								<option value = "france">France</option>
+								<option value = "angleterre">Angleterre</option>
+								<option value = "espagne">Espagne</option>
+								<option value = "japon">Japon</option>
+							</select>
+						</p>
+					</form>
+					Pour selectionner une option par defaut on ajoute l'attribut : "selected" a l'une des "option".
+					<br />
+					On peut aussi regrouper les options dans des balises "optgroup", par exemple :
+					<form method="post" action="traitement.php">
+						<p>
+							<label for="pays">Dans quel pays habitez-vous ?</label><br />
+							<select name="pays" id="pays">
+								<optgroup label="Europe">
+									<option value="france">France</option>
+									<option value="espagne">Espagne</option>
+									<option value="italie">Italie</option>
+									<option value="royaume-uni">Royaume-Uni</option>
+								</optgroup>
+								<optgroup label="Amérique">
+									<option value="canada">Canada</option>
+									<option value="etats-unis">Etats-Unis</option>
+								</optgroup>
+								<optgroup label="Asie">
+									<option value="chine">Chine</option>
+									<option value="japon">Japon</option>
+								</optgroup>
+							</select>
+						</p>
+					</form>
+				</p>
+				
+				<h2> Finaliser et envoyer le formulaire </h2>
+				
+				<h3> Regrouper les champs </h3>
+				
+				<p>
+					Lorsque le formulaire est de taille importante, il est necessaire de regrouper les champs au sein de plusieurs balises
+					"fieldset" ou sera ensuite place une balise "legend" comportant le nom du "fieldset".
+					Par exemple :
+					<form method="post" action="traitement.php">
+ 
+						<fieldset>
+							<legend>Vos coordonnées</legend> <!-- Titre du fieldset --> 
+
+							<label for="nom">Quel est votre nom ?</label>
+							<input type="text" name="nom" id="nom" />
+							<br />
+							<label for="prenom">Quel est votre prénom ?</label>
+							<input type="text" name="prenom" id="prenom" />
+ 							<br />
+							<label for="email">Quel est votre e-mail ?</label>
+							<input type="email" name="email" id="email" />
+
+						</fieldset>
+ 
+						<fieldset>
+							<legend>Votre souhait</legend> <!-- Titre du fieldset -->
+ 
+							<p>
+								Faites un souhait que vous voudriez voir exaucé :
+								<br />
+								<input type="radio" name="souhait" value="riche" id="riche" /> <label for="riche">Etre riche</label>
+								<br />
+								<input type="radio" name="souhait" value="celebre" id="celebre" /> <label for="celebre">Etre célèbre</label>
+								<br />
+								<input type="radio" name="souhait" value="intelligent" id="intelligent" /> <label for="intelligent">Etre <strong>encore</strong> plus intelligent</label>
+								<br />
+								<input type="radio" name="souhait" value="autre" id="autre" /> <label for="autre">Autre...</label>
+							</p>
+ 
+							<p>
+								<label for="precisions">Si "Autre", veuillez préciser :</label>
+								<textarea name="precisions" id="precisions" cols="40" rows="4"></textarea>
+							</p>
+						</fieldset>
+					</form>
+				</p>
+				
+				<p>
+					Pour placer automatiquement le curseur dans un champ on ajoute l'attribut "autofocus" dans le "input /".
+					<br />
+					Pour rendre un champ obligatoire on ajoute l'attribut "required".
+					<br />
+					On dispose de pseudo-formats en CSS pour changer le style des éléments requis (:required) et invalides (:invalid). N'oubliez pas non plus que vous disposez du
+					pseudo-format :focus pour changer l'apparence d'un champ lorsque le curseur se trouve à l'intérieur.
+				</p>
+				
+				<h3> Le bouton d'envoie </h3>
+				
+				<p>
+					On utilise la encore la balise "input /" avec comme type :
+					<ul>
+						<li> "submit" : bouton principal d'envoie de formulaire. Il renvoie sur la page indique dans l'attribut "action" du formulaire. </li>
+						<li> "reset" : remet a zero le formulaire. </li>
+						<li> "image" : equivalent au bouton "submit" mais presente cette fois sous forme d'une image. Il faudra donc rajouter un attribut "src". </li>
+						<li> "button" : bouton generique, qui n'aura par defaut aucun effet. En general, ce bouton est gere par JavaScript. </li>
+					</ul>
+					On peut changer le texte a afficher avec la balise "value".
+				</p>
+				<form class = "envoyer">
+					<p>
+						<input type = "submit" value = "Envoyer" />
+					</p>
+				</form>
+			</article>
+		</section>
+		
+		<footer>
+			<p>
+				<a href = "#debut" class = "haut">Haut de page</a>
+			</p>
+			<p>
+				Site d'aide pour codage HTML5 et CSS3 realise par Moi Même.
+			</p>
+			<p class = "accueil">
+				<a href = "test.html"> <img src = "accueil.gif" alt = "accueil" /> </a>
+			</p>
+		</footer>
+		
+	</body>
+</html>

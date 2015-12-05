@@ -1,0 +1,395 @@
+@font-face
+{
+    font-family: 'armalite';
+    src: url('polices/armalite_rifle-webfont.eot');
+    src: url('polices/armalite_rifle-webfont.eot?#iefix') format('embedded-opentype'),
+         url('polices/armalite_rifle-webfont.woff') format('woff'),
+         url('polices/armalite_rifle-webfont.ttf') format('truetype'),
+         url('polices/armalite_rifle-webfont.svg#armalite_rifleregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'action_man';
+    src: url('polices/Action_Man-webfont.eot');
+    src: url('polices/Action_Man-webfont.eot?#iefix') format('embedded-opentype'),
+         url('polices/Action_Man-webfont.woff') format('woff'),
+         url('polices/Action_Man-webfont.ttf') format('truetype'),
+         url('polices/Action_Man-webfont.svg#action_manregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'report';
+    src: url('polices/1942-webfont.eot');
+    src: url('polices/1942-webfont.eot?#iefix') format('embedded-opentype'),
+         url('polices/1942-webfont.woff2') format('woff2'),
+         url('polices/1942-webfont.woff') format('woff'),
+         url('polices/1942-webfont.ttf') format('truetype'),
+         url('polices/1942-webfont.svg#1942_report1942_report') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body
+{
+	background-color: #aec4ff;
+	width: 85%;
+	margin: auto;
+}
+p /* On modifie les propriétés des paragraphes */
+{
+    color: blue;
+}
+
+h1 /* Et ici les titres tres importants */
+{
+	color: red;
+	font-family: armalite,Arial;
+	font-size: 4em; /* taille en rapport */
+	text-align: center;
+	background: url("route.jpg") no-repeat center;
+	border: 2px solid gray;
+	box-shadow: 3px 3px 7px gray;
+	border-radius: 10px 15px 10px 15px;
+	word-wrap: break-word; /* Coupe le mot s'il est trop grand */
+	text-shadow: 3px 3px 3px rgb(0,0,0);
+}
+h2
+{
+	font-family: action_man, Arial, serif;
+	font-size: 2em;
+	color: #b88e54;
+}
+h3
+{
+	font-family: report, Arial, serif;
+	font-size: 1.3em;
+	text-decoration: underline;
+}
+mark
+{
+	background-color: #7aff00; 
+}
+ul, ol
+{
+	color: #ca130a;
+}
+.yellow  /* Permet les modifications de la class yellow */
+{
+	color: yellow;
+}
+#ancre /* Permet les modifications de l'id ancre */
+{
+	color: #960000;
+	background-color: #73bc1f;
+	/* opacity: 0.8; */
+	background-color: rgba(115,188,31,0.65);
+}
+.photos
+{
+	font-size: 60px; /* taille en pixel */
+}
+.accueil
+{
+	text-align: center;
+}
+.selecteur
+{
+	font-size: 1.2em; 
+	font-family: "Comic sans MS";
+}
+.parrain
+{
+	font-size: 1.5em;
+	font-family: "Trebuchet MS",Arial,Verdana,serif;
+		/* On ecrit plusieur police au cas ou l'une ne soit pas reconnu */
+		/* S'il y a des espaces, on met le nom entre "" */
+}
+.police
+{
+	font-family: 'action_man',Arial;
+}
+.italic
+{
+	font-style: italic;
+}
+.oblique
+{
+	font-style: oblique;
+}
+.normal
+{
+	font-style: normal;
+}
+.gras
+{
+	font-weight: bold;
+}
+.souligne
+{
+	text-decoration: underline;
+}
+.barre
+{
+	text-decoration: line-through;
+}
+.ligne_dessus
+{
+	text-decoration: overline;
+}
+.clignotant
+{
+	text-decoration: blink;
+}
+.remarque
+{
+	text-decoration: underline;
+	font-style: oblique;
+	font-family: 'action_man';
+}
+.flottant
+{
+	float: left;
+}
+.c1
+{
+	color: #110101;
+}
+.c2
+{
+	color: #620202;
+}
+.c3
+{
+	color: #930303;
+}
+.c4
+{
+	color: #E40404;
+}
+.rgb
+{
+	color: rgb(245,54,241);
+}
+.imagefond
+{
+	/*background-image: url("fond.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;*/
+	background: url("clementine.jpg") no-repeat top, url("fond.jpg") fixed no-repeat center;
+	color: white;
+}
+.standard
+{
+	border: green groove;
+}
+.imgbordure
+{
+	border: green solid;
+}
+.arrondie
+{
+	border: green ridge;
+	border-radius: 10px 5px 10px 5px;
+}
+.ombre
+{
+	border: green outset;
+	box-shadow: 4px 4px 3px green;
+}
+.inset
+{
+	border: green outset;
+	box-shadow: 1px 1px 8px green inset;
+}
+.ombretext
+{
+	text-shadow: 1.5px 1.5px 3px green;
+}
+.hover
+{
+	text-decoration: none;
+	font-style: oblique;
+}
+.hover:hover
+{
+	text-decoration: underline;
+	font-style: normal;
+	font-weight: bold;
+	color: green;
+	text-shadow: 1.5px 1.5px 3px rgb(245,54,241);
+}
+a
+{
+	color: #404041;
+	font-style: italic;
+}
+a:active
+{
+	text-decoration: none;
+	font-style: normal;
+	font-weight: bold;
+	color: green;
+}
+a:visited
+{
+	color: #404041;
+}
+.focus:focus
+{
+	background-color: #FFCC66;
+}
+
+aside
+{
+	font-size: 0.9em;
+	font-weight: bold;
+	border: 1px solid green;
+	padding-right: 10px;
+	margin-right: 5px;
+	width: 23%;
+	max-width: 230px;
+	background: rgba(140,190,140,0.55);
+	border: 1px solid green;
+	box-shadow: 4px 4px 7px green;
+	border-radius: 7px;
+	display:inline-block;
+	vertical-align: top;
+	word-wrap: break-word;
+}
+nav ul
+{
+	list-style-type: none;
+	padding: 1% 10%;
+	font-size: 1.05em;
+}
+nav li
+{
+	margin-bottom: 7px;
+}
+nav a
+{
+	text-decoration: none;
+}
+nav a:hover
+{
+	color: #760001;
+	border-bottom: 3px solid #760001;
+}
+article
+{
+	display: inline-block;
+	vertical-align: top;
+	border: 1px solid green;
+	border-radius: 5px;
+	box-shadow: 2px 0px 6px gray;
+	padding: 5px;
+	width: 70%;
+	margin-left: 1%;
+}
+footer
+{
+	text-align: center;
+	border: 1px solid black;
+	margin: 15px 0px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border: 1px solid gray;
+	box-shadow: 4px 4px 3px gray;
+}
+
+.bord1 td, .bord2 td, .bord2 th
+{
+	border: 1px solid black;
+}
+.bord2
+{
+	border-collapse: collapse;
+}
+form
+{
+	border: 1.5px solid maroon;
+	border-radius: 5px;
+	padding-left: 10px;
+	margin: 5px 0px;
+}
+textarea
+{
+	text-align: justify;
+}
+.envoyer
+{
+	text-align: center;
+}
+
+@media screen and (max-width: 680px)
+{
+	h1
+	{
+		color: red;
+		font-family: armalite,Arial;
+		font-size: 3.2em;
+		text-align: center;
+		background: url("route.jpg") no-repeat center;
+		border: 2px solid gray;
+		box-shadow: 3px 3px 7px gray;
+		border-radius: 10px 15px 10px 15px;
+		word-wrap: break-word;
+		text-shadow: 3px 3px 3px rgb(0,0,0);
+	}
+	h2
+	{
+		font-family: action_man, Arial, serif;
+		font-size: 1.6em;
+		color: #b88e54;
+	}
+	h3
+	{
+		font-family: report, Arial, serif;
+		font-size: 1.2em;
+		text-decoration: underline;
+	}
+	aside
+	{
+		font-size: 0.9em;
+		font-weight: bold;
+		border: 1px solid green;
+		margin-bottom: 15px;
+		min-width: 96.5%;
+		background: rgba(140,190,140,0.55);
+		border: 1px solid green;
+		box-shadow: 4px 4px 7px green;
+		border-radius: 7px;
+		word-wrap: break-word;
+	}
+	nav ul
+	{
+		padding: 2%;
+		list-style-type: none;
+		font-size: 1.1em;
+	}
+	nav li
+	{
+		display: inline-block;
+		width: 48.5%;
+		text-align: center;
+		vertical-align: middle;
+	}
+	nav a:hover
+	{	
+		color: #760001;
+		border-bottom: 3px solid #760001;
+	}
+	article
+	{
+		border: 1px solid green;
+		border-radius: 5px;
+		box-shadow: 2px 0px 6px gray;
+		padding: 5px;
+		width: 96%;
+		margin-left: 1%;
+	}
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8" />
+		<link rel="stylesheet" href="style.css" />
+		<title> Boite </title> 
+	<head>
+	
+	<body>
+		<header>
+			<h1 id = "debut"> Le modele des boites </h1>
+		</header>
+		
+		
+		<section>
+			<aside>
+				<nav>
+					<ul>
+						<li> <a href = "test.html"> Accueil </a> </li>
+						<li> <a href = "page.html"> La page </a> </li>
+						<li> <a href = "Dossier/l'autre_page.html"> L'autre page </a> </li>
+						<li> <a href = "liens.html"> Les liens </a> </li>
+						<li> <a href = "deco.html"> Les decorations et la couleur </a> </li>
+						<li> <a href = "fond.html"> Le fond </a> </li>
+						<li> <a href = "bordures.html"> Les bordures </a> </li>
+						<li> <a href = "mise.html"> La mise en page </a> </li>
+						<li> <a href = "boite.html"> Le modele des boites </a> </li>
+						<li> <a href = "position.html"> Le positionnement </a> </li>
+						<li> <a href = "tableaux.html"> Les tableaux </a> </li>
+						<li> <a href = "formulaire.html"> Les formulaires </a> </li>
+						<li> <a href = "video.html"> La video et l'audio </a> </li>
+						<li> <a href = "media.html"> Les media queries </a> </li>
+						<li> <a href = "loin.html"> Pour aller plus loin </a> </li>
+						<li> <a href = "web.html"> Envoyer sur le web </a> </li>
+					</ul>
+				</nav>
+			</aside>
+			
+			<article>
+			<h2> Les balises de type block et inline </h2>
+				<ul>
+					<li> <strong>block</strong> : cree automatiquement un retour a la ligne avant et apres (<strong>div</strong>). </li>
+					<li> <strong>inline</strong> : est obligatoirement a l'interieur d'un block (<strong>span</strong>). </li>
+					<a href = "https://openclassrooms.com/courses/apprenez-a-creer-votre-site-web-avec-html5-et-css3/le-modele-des-boites#/id/r-1610999"> Quelques exemples </a>
+				</ul>
+			
+			<h2> Les dimensions du type block </h2>
+				<p>
+					On dispose en CSS de "width" pour determiner la largeur (en px ou %) et de "height" pour la hauteur (en px ou %).
+					<br />
+					On peut aussi poser des dimensions min et max pour un bloc avec :
+					<ul>
+						<li> "min-width" : largeur min </li>
+						<li> "min-height" : hauteur min </li>
+						<li> "max-width" : largeur max </li>
+						<li> "max-height" : hauteur max </li>
+					</ul>
+					On peut ainsi combiner les deux.
+					<br />
+					Ca valeur par defaut est "auto". La page prend alors toute la place disponible.
+				</p>
+				
+			<h2> Les marges </h2>
+				<p>
+					Il y a les marges interieurs et exterieurs :
+					<br />
+					<img src = "marge.jpg" />
+					<br />
+					On peut les modifier avec "padding" pour l'interieur et "margin" pour l'exterieur, les deux en pixels en general.
+					<br />
+					<span class = "souligne">Remarque :</span> les balises de type inline ont aussi des marges.
+					<br />
+					Elles s'applique au 4 cotes. Comme pour border, on a top, bottom, left, right pour les modifier une par une.
+					<br />
+					<span class = "souligne">Exemple :</span> "margin-top" et "padding-bottom". Il y a d'autres façons de spécifier les
+					marges avec les propriétés margin et padding. Par exemple : margin: 2px 0 3px 1px; signifie « 2 px de marge en haut,
+					0 px à droite (le px est facultatif dans ce cas), 3 px en bas, 1 px à gauche ». Autre notation raccourcie :
+					margin: 2px 1px; signifie « 2 px de marge en haut et en bas, 1 px de marge à gauche et à droite ».
+				</p>
+				
+				<p>
+					Pour centrer les blocs il <strong>donner un largeur</strong> avec "width" puis indiquer des marges exterieures
+					<strong>automatique</strong> avec "margin: auto;"
+				</p>
+			
+			<h2> Quand ca depasse </h2>
+				<p>
+					Quand le bloc qu'on a definit est trop petit pour le texte on utilise "overflow". Cette balise peut prendre les
+					valeurs suivantes :
+					<ul>
+						<li> "visible" : le texte sort sort du cadre mais reste visible (par defaut) </li>
+						<li> "hidden" : le texte exterieur n'est pas visible </li>
+						<li> "scroll" : barre de defilement sur le cote qui permet de voir le texte entier </li>
+						<li> "auto" : le nvigateur met des barres de defilement si c'est necessaire </li>
+					</ul>
+					De plus, la fonction "<strong>word-wrap: break-word;</strong>" permet de couper un mot lorsqu'il est trop long pour entre dans le bloc (comme un lien par exemple).
+				</p>
+			</article>
+		</section>
+		
+		<footer>
+			<p>
+				<a href = "#debut" class = "haut">Haut de page</a>
+			</p>
+			<p>
+				Site d'aide pour codage HTML5 et CSS3 realise par Moi Même.
+			</p>
+			<p class = "accueil">
+				<a href = "test.html"> <img src = "accueil.gif" alt = "accueil" /> </a>
+			</p>
+		</footer>
+		
+	</body>
+</html>

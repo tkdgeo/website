@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8" />
+		<link rel="stylesheet" href="style.css" />
+		<title> Image de fond </title> 
+	<head>
+	
+	<body>
+		<header>
+			<h1 id = "debut"> Image de fond </h1>
+		</header>
+		
+		
+		<section>
+			<aside>
+				<nav>
+					<ul>
+						<li> <a href = "test.html"> Accueil </a> </li>
+						<li> <a href = "page.html"> La page </a> </li>
+						<li> <a href = "Dossier/l'autre_page.html"> L'autre page </a> </li>
+						<li> <a href = "liens.html"> Les liens </a> </li>
+						<li> <a href = "deco.html"> Les decorations et la couleur </a> </li>
+						<li> <a href = "fond.html"> Le fond </a> </li>
+						<li> <a href = "bordures.html"> Les bordures </a> </li>
+						<li> <a href = "mise.html"> La mise en page </a> </li>
+						<li> <a href = "boite.html"> Le modele des boites </a> </li>
+						<li> <a href = "position.html"> Le positionnement </a> </li>
+						<li> <a href = "tableaux.html"> Les tableaux </a> </li>
+						<li> <a href = "formulaire.html"> Les formulaires </a> </li>
+						<li> <a href = "video.html"> La video et l'audio </a> </li>
+						<li> <a href = "media.html"> Les media queries </a> </li>
+						<li> <a href = "loin.html"> Pour aller plus loin </a> </li>
+						<li> <a href = "web.html"> Envoyer sur le web </a> </li>
+					</ul>
+				</nav>
+			</aside>
+			
+		<article>
+		
+		<h2> Mettre l'image </h2>
+		<p>
+			On utilise "background-image: url("");".
+			<br />
+			<a href = "Dossier/l'autre_page.html"> Voyer par vous meme le rendu d'un fond fixe non répété </a>
+			<br />
+		</p>
+		
+		<h2> Fixer </h2>
+		<p>
+			On peut fixer le fond avec "background-attachment:" suivi de "fixed" ou de "scroll" (defile avec
+			le fond, par defaut).
+		</p>
+		
+		<h2> Repetition </h2>
+		<p>
+			Pour gerer la repetition du fond, on utilise "background-repeat:" avec :
+			<ul>
+				<li> "no-repeat" : le fond ne sera pas repete. </li>
+				<li> "repeat-x" : repete seulement sur l'horizontal. </li>
+				<li> "repeat-y" : repete seulement sur la vertical. </li>
+				<li> "repeat" : repete en mosaique (par defaut). </li>
+			</ul>
+		</p>
+		
+		<h2> Position </h2>
+		<p>
+			On utilise "background-position:". Il faut qu'elle soit couplee avec "background-repeat: no-repeat" 
+			pour qu'elle soit interessante.
+			<br />
+			<ul>
+				<li> On donne deux valeurs (decalage a gauche et en bas) en pixels (px) par rapport a l'angle
+				superieur gauche de la page </li>
+				<br />
+				<li> "top" pour en haut </li>
+				<li> "bottom" pour en bas </li>
+				<li> "left" pour a gauche </li>
+				<li> "center" pour centre </li>
+				<li> "right" pour a droite </li>
+				<li> Il est aussi possible de combiner ces mots </li>
+			</ul>
+		</p>
+		
+		<h2> Combiner les proprietes </h2>
+		<p>
+			Si on utilise plusieurs proprietes on les rassemblent sous "background:"; et aussi plusieurs images
+			de fond dans l'ordre d'affichage.
+			<br />
+			<span class = "souligne"> Exemple :</span> "background: url("fond1.png") fixed no-repeat top right, url("fond2.jpg") fixed;"
+			<br />
+			Dans n'importe quelle ordre.
+		</p>
+		
+		<h2> Transparence </h3>
+		<p>
+			On utilise "opacity:" avec une valeur de 0 (totalement trasparent) a 1 (totalement opaque, par defaut).
+			<br />
+			Mais cela sera applique a <span class = "gras"> tout </span> le contenu de cet element.
+			<br />
+			Si c'est pour juste jouer sur la transparence du fond, il faut plutot utiliser la <span class = "gras">
+			notation RGBa </span>.
+			<span class = "souligne"> Exemple pour une transparence de 0.5:</span> "background-color : rgba(255, 0, 0 ,0.5)"
+			<br />
+			Vous pouvez aussi voir <a href = "test.html#ancre"> ici </a>
+		</p>
+		</article>
+		</section>
+		
+		<footer>
+			<p>
+				<a href = "#debut" class = "haut">Haut de page</a>
+			</p>
+			<p>
+				Site d'aide pour codage HTML5 et CSS3 realise par Moi Même.
+			</p>
+			<p class = "accueil">
+				<a href = "test.html"> <img src = "accueil.gif" alt = "accueil" /> </a>
+			</p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8" />
+		<link rel="stylesheet" href="style.css" />
+		<title> Les bordures et les ombres </title> 
+	<head>
+	
+	<body>
+		<header>
+			<h1 id = "debut"> Les bordures et les ombres </h1>
+		</header>
+		
+		
+		<section>
+			<aside>
+				<nav>
+					<ul>
+						<li> <a href = "test.html"> Accueil </a> </li>
+						<li> <a href = "page.html"> La page </a> </li>
+						<li> <a href = "Dossier/l'autre_page.html"> L'autre page </a> </li>
+						<li> <a href = "liens.html"> Les liens </a> </li>
+						<li> <a href = "deco.html"> Les decorations et la couleur </a> </li>
+						<li> <a href = "fond.html"> Le fond </a> </li>
+						<li> <a href = "bordures.html"> Les bordures </a> </li>
+						<li> <a href = "mise.html"> La mise en page </a> </li>
+						<li> <a href = "boite.html"> Le modele des boites </a> </li>
+						<li> <a href = "position.html"> Le positionnement </a> </li>
+						<li> <a href = "tableaux.html"> Les tableaux </a> </li>
+						<li> <a href = "formulaire.html"> Les formulaires </a> </li>
+						<li> <a href = "video.html"> La video et l'audio </a> </li>
+						<li> <a href = "media.html"> Les media queries </a> </li>
+						<li> <a href = "loin.html"> Pour aller plus loin </a> </li>
+						<li> <a href = "web.html"> Envoyer sur le web </a> </li>
+					</ul>
+				</nav>
+			</aside>
+			
+		<article>
+		<h2> Les bordures </h2>
+		
+		<h3> Les bordures standard </h3>
+		<p class = "standard">
+			La super-propriete "border" fonctionne comme "background", elle regroupe
+			"border-bottom-width", "border-color", border-style"...
+			<br />
+			On peut utiliser jusqu'a 3 valeurs pour modifier l'apparence de la bordure :
+			<ul>
+				<li> la largeur : mettre la valeur en pixels (px) </li>
+				<li> la couleur : soit en nom, en hexadecimale ou en RGB </li>
+				<li> le type :
+					<ul>
+						<li> "none" : pas de bordure (par defaut) </li>
+						<li> "solid" : trait simple </li>
+						<li> "dotted" : pointilles </li>
+						<li> "dashed" : tirets </li>
+						<li> "double" : bordure double </li>
+						<li> "groove" : relief </li>
+						<li> "ridge" : autre effet relief </li>
+						<li> "inset" : effet 3D global enfonce </li>
+						<li> "outset" : effet 3D global sureleve </li>
+					</ul>
+				</li>
+			</ul>
+			<img src = "bordures.png" alt = "Les différents types de bordures" />
+			<br />
+			On peut choisir une bordure differente pour les bords :
+			<ul>
+				<li> "border-top" : bordure du haut </li>
+				<li> "border-bottom" : bordure du bas </li>
+				<li> "border-left" : bordure de gauche </li>
+				<li> "border-right" : bordure de droite </li>
+			</ul>
+			Il y a aussi des equivalents pour chaque detail :
+			<ul>
+				<li> "border-top-width" : epaisseur bordure du haut </li>
+				<li> "border-top-color" : couleur du haut </li>
+				<li> etc. </li>
+			</ul>
+			Ce sont aussi des super-proprietes.
+			<br />
+			Il est possible de modifier les bordures des images, des textes comme strong...
+			<br />
+			<a href = "SUWE.jpg" class = "imgbordure"> <img src = "tn_SUWE.jpg" alt = "StartUp Weekend de Lille 2015" /> </a>
+		</p>
+		
+		<h3> Les bordures arrondies </h3>
+		<p class = "arrondie">
+			On utilise la propriete "border-radius:" suivi de la taille de l'arrondi en pixels (px).
+			<br />
+			Les arrondies se voient avec une bordure ou une couleur de fond.
+			<br />
+			On peut indiquer l'arrondi des 4 coins : "border-radius: 10px 5px 10px 5px;"
+			<br />
+			On commence en haut a gauche puis sens horaire.
+			<br />
+			Ou encore des courbes elliptiques : "border-radius: 20px / 10px;"
+		</p>
+		
+		<h2> Les ombres </h2>
+		<p>
+			<h3> Les ombres des boites </h3>
+			<p class = "ombre">
+				La propriete est "box-shadow:", elle s'applique a tout le bloc et prend les 4 valeurs
+				dans l'ordre suivant :
+				<ol>
+					<li> le decalage horizontal de l'ombre en px </li>
+					<li> le decalage vertical de l'ombre en px </li>
+					<li> l'adoucissement du degrade en px </li>
+					<li> la couleur de l'ombre </li>
+					<li> <span class = "souligne"> facultative :</span> "inset". Dans ce cas l'ombre
+					est placee a l'interieur du bloc.
+				</ol>
+				<span class = "inset"> <span class = "souligne"> Exemple :</span> box-shadow: 6px 6px 0px black; </span>
+				<br />
+				Pour les navigateurs mobiles il faudra utiliser "-webkit-box-shadow"
+			</p>
+			
+			<h3> L'ombre du texte </h3>
+			<p class = "ombretext">
+				Avec "text-shadow:" avec les 2 décalages, adoucissement et couleur.
+			</p>
+		</p>
+		</article>
+		</section>
+		
+		<footer>
+			<p>
+				<a href = "#debut" class = "haut">Haut de page</a>
+			</p>
+			<p>
+				Site d'aide pour codage HTML5 et CSS3 realise par Moi Même.
+			</p>
+			<p class = "accueil">
+				<a href = "test.html"> <img src = "accueil.gif" alt = "accueil" /> </a>
+			</p>
+		</footer>
+	</body>
+</html>

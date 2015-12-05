@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8" />
+		<link rel="stylesheet" href="style.css" />
+		<title> Media queries </title> 
+	<head>
+	
+	<body>
+		<header>
+			<h1 id = "debut"> Les decorations et la couleur </h1>
+		</header>
+		
+		
+		<section>
+			<aside>
+				<nav>
+					<ul>
+						<li> <a href = "test.html"> Accueil </a> </li>
+						<li> <a href = "page.html"> La page </a> </li>
+						<li> <a href = "Dossier/l'autre_page.html"> L'autre page </a> </li>
+						<li> <a href = "liens.html"> Les liens </a> </li>
+						<li> <a href = "deco.html"> Les decorations et la couleur </a> </li>
+						<li> <a href = "fond.html"> Le fond </a> </li>
+						<li> <a href = "bordures.html"> Les bordures </a> </li>
+						<li> <a href = "mise.html"> La mise en page </a> </li>
+						<li> <a href = "boite.html"> Le modele des boites </a> </li>
+						<li> <a href = "position.html"> Le positionnement </a> </li>
+						<li> <a href = "tableaux.html"> Les tableaux </a> </li>
+						<li> <a href = "formulaire.html"> Les formulaires </a> </li>
+						<li> <a href = "video.html"> La video et l'audio </a> </li>
+						<li> <a href = "media.html"> Les media queries </a> </li>
+						<li> <a href = "loin.html"> Pour aller plus loin </a> </li>
+						<li> <a href = "web.html"> Envoyer sur le web </a> </li>
+					</ul>
+				</nav>
+			</aside>
+			
+			<article>
+				<h2> Pour modifier les decorations </h2>
+				
+				<h3> Italique </h3>
+				
+				<p class = "italic"> 
+					On utilise "font-style:" avec "italic", "oblique" ou "normal".
+					<br />
+					<span class = "oblique"> Et oui ici c'est oblique. </span>
+					<br />
+					<span class = "normal"> "normal" permet d'enlever l'italique pour em. </span>
+				</p>
+			
+				<h3> Gras </h3>
+				<p class = "gras">
+					On utilise "font-weight:" avec "bold" ou "normal".
+				</p>
+			
+			<h3> Soulignement et autres decorations </h3>
+			<p>
+				On utilise "text-decoration:" avec :
+				<ul>
+					<li class = "souligne"> underline </li>
+					<li class = "barre"> line-through </li>
+					<li class = "ligne_dessus"> overline </li>
+					<li class = "clignotant"> blink (mais ne fonctionne pas sous chrome et IE) </li>
+					<li> none </li>
+				</ul>
+			</p>
+			
+			<h3> L'alignement </h3>
+			<p> 
+				On utilise "text-align:" avec "left", "center", "right" ou "justify".
+				<br />
+				Justify permet de faire en sorte que le texte prenne toute la largeur possible sans
+				laisser de blanc a la fin des lignes.
+				<br />
+				<span class = "remarque">Remarque</span> : on ne peut aligner qu'un paragraphe
+				(pas un span par exemple)
+			</p>
+			
+			<h3> Les flottants </h3>
+			<p>
+				Permet de faire flotter une image autour d'un texte par exemple.
+				<br />
+				On utilise "float:" avec "left" ou "right".
+				<br />
+				<a href = "dossier/l'autre_page.html"> Voyer un exemple ici </a>
+				<br />
+				Pour stopper un flottant on utilise "clear:" qui peut prendre 3 valeurs :
+				<ul>
+					<li> "left" apres un "float: left;" </li>
+					<li> "right" apres un "float: right;" </li>
+					<li> "both" apres un "float: left;" ou  "float: right;" </li>
+				</ul>
+			</p>
+			
+			<h2> Le vaste monde des couleurs </h2>
+			
+			<h3> Avec le nom </h3>
+			<p>
+				Mais il n'y a que 16 couleurs officielles: 
+				<br />
+				<img src = "couleur.png" alt = "les 16 couleurs CSS" /> 
+			</p>
+			
+			<h3> La notation hexadecimale </h3>
+			<p>
+				Combinaison de 6 chiffres (de 0 a 9) et de lettres (de A a F) precede d'un #
+				<br />
+				De #000000 (noire) a #FFFFFF (blanc)
+				<br />
+				Certain logiciel comme Gimp ou paint.NET permettent de connaitre la couleur correspondante.
+				<a href = "http://telecharger.tomsguide.fr/PaintNET,0301-4883.html" alt = "paint.NET"> Paint.NET </a>
+				<br />
+				<span class = "c1"> Ceci vous permet </span> <span class= "c2"> de faire naitre </span>
+				<span class = "c3"> toutes les nuances </span> <span class = "c4"> d'une seule couleur ! </span>
+				<br />
+				Il existe une notation raccourcie : #FA3 equivaut a #FFAA33
+			</p>
+			
+			<h3> La methode RGB </h3>
+			<p>
+				Pour trouver les valeurs ouvrir paint et aller dans "Modifier les couleurs" :
+				<img src = "RGB.png" alt = "Paint" />
+				<br />
+				<span class = "rgb"> Puis on utilise "color: rgb(240,96,204);" </span>
+				<br />
+				N'oublier pas d'utiliser la boite a couleurs.
+			</p>
+			
+			<h3> Couleur de fond </h3>
+			<p>
+				On utilise "background-color:" de la meme maniere que color.
+				<br />
+				Il faut travailler sur la balise body.
+				<p>
+					<span class = "souligne"> Remarque :</span> Si j'applique une couleur de fond noire
+					et une couleur de texte blanche à la balise body, tous mes titres et paragraphes auront
+					eux aussi un arrière-plan de couleur noire et un texte de couleur blanche… C'est ce
+					phénomène qu'on appelle l'héritage : on dit que les balises qui se trouvent à l'intérieur
+					d'une autre balise « héritent » de ses propriétés.
+					<br />
+					Cela ne fonctionne pas uniquement pour la couleur, entendons-nous bien. Toutes les
+					propriétés CSS seront héritées : vous pouvez par exemple demander une mise en gras dans
+					la balise <body> et tous vos titres et paragraphes seront en gras.
+				</p>
+			</p>
+			
+			</article>
+		</section>
+		
+		<footer>
+			<p>
+				<a href = "#debut" class = "haut">Haut de page</a>
+			</p>
+			<p>
+				Site d'aide pour codage HTML5 et CSS3 realise par Moi Même.
+			</p>
+			<p class = "accueil">
+				<a href = "test.html"> <img src = "accueil.gif" alt = "accueil" /> </a>
+			</p>
+		</footer>
+		
+	</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8" />
+		<link rel="stylesheet" href="style.css" />
+		<title> Media queries </title> 
+	<head>
+	
+	<body>
+		<header>
+			<h1 id = "debut"> Les media queries </h1>
+		</header>
+		
+		
+		<section>
+			<aside>
+				<nav>
+					<ul>
+						<li> <a href = "test.html"> Accueil </a> </li>
+						<li> <a href = "page.html"> La page </a> </li>
+						<li> <a href = "Dossier/l'autre_page.html"> L'autre page </a> </li>
+						<li> <a href = "liens.html"> Les liens </a> </li>
+						<li> <a href = "deco.html"> Les decorations et la couleur </a> </li>
+						<li> <a href = "fond.html"> Le fond </a> </li>
+						<li> <a href = "bordures.html"> Les bordures </a> </li>
+						<li> <a href = "mise.html"> La mise en page </a> </li>
+						<li> <a href = "boite.html"> Le modele des boites </a> </li>
+						<li> <a href = "position.html"> Le positionnement </a> </li>
+						<li> <a href = "tableaux.html"> Les tableaux </a> </li>
+						<li> <a href = "formulaire.html"> Les formulaires </a> </li>
+						<li> <a href = "video.html"> La video et l'audio </a> </li>
+						<li> <a href = "media.html"> Les media queries </a> </li>
+						<li> <a href = "loin.html"> Pour aller plus loin </a> </li>
+						<li> <a href = "web.html"> Envoyer sur le web </a> </li>
+					</ul>
+				</nav>
+			</aside>
+			
+			<article>
+				<h2> Mise en place des media queries </h2>
+				<p>
+					Il s'agit de règles et non de proprietes que l'on applique dans certaines conditions. Concrètement, on va pouvoir dire
+					"si la resolution de l'ecran est inferieur a tant, applique les proprietes CSS suivantes.".
+					<br />
+					Pour appliquer un media query il faut :
+					<ul>
+						<li> soit charger une nouvelle feuille de style .css </li>
+						<li> soit en ecrivant la regle directement dna le fichier .css habituel </li>
+					</ul>
+				</p>
+				<p>
+					Dans le premier cas, on ajoute une l'attribut "media" a la balise "link" qui nous permet de charger le fichier .css.
+					Dans cette attribut, on ecrit la regle pour que le fichier soit charge. On dit qu'on fait une "requete de media".
+					<br />
+					Voici un exemple : "link rel="stylesheet" media="screen and (max-width: 1280px)" href="petite_resolution.css" /"
+					<br />
+					On peut donc charger plusieurs fichiers, un par defaut et les autres pour certaines caracteristiques.
+				</p>
+				<p>
+					Dans le deuxieme cas, on ecrit la regle dans le fichier .css habituel avec comme en-tete :
+					"@media screen and (max-width: 1280px)"
+				</p>
+				
+				<h2> Les regles disponibles </h2>
+				<p>
+					<ul>
+						<li> "color" : gestion de la couleur (en bits/pixel) </li>
+						<li> "height" et "width" : hauteur et largeur de la zone d'affichage </li>
+						<li> "device-height" et "device-width" : hauteur et largeur du peripherique </li>
+						<li> "orientation" : portrait ou paysage </li>
+						<li>  "media" : type d'ecran de sortie. Les valeurs possibles sont :
+							<ul>
+								<li> "screen" : ecran classique </li>
+								<li> "handheld" : peripherique mobile </li>
+								<li> "print" : impression </li>
+								<li> "tv" : television </li>
+								<li> "projection" : projecteur </li>
+								<li> "all" : tous les types d'ecran </li>
+							</ul>
+						</li>
+					</ul>
+					On peut ajouter les prefixe "min-" et "max-" devant la plupart des regles.
+					<br />
+					On peut combiner les regles  a l'aide des mots suivants :
+					<ul>
+						<li> "only" : uniquement </li>
+						<li> "and" : et </li>
+						<li> "not" : non </li>
+					</ul>
+					Voici quelques exemples :
+					<br />
+					@media screen and (max-width: 1280px)
+					<br />
+					@media all and (min-width: 1024px) and (max-width: 1280px)
+					<br />
+					@media tv
+					<br />
+					@media all and (orientation: portrait)
+				</p>
+				
+				<h2> Remarque </h2>
+				<p>
+					Les anciens navigateurs, notamment IE6, IE7 et IE8, ne connaissent pas les media queries mais sont capables
+					d'interpréter le début de la règle (ils savent lire @media screen par exemple). Ils vont donc lire les propriétés
+					CSS qui suivent même s'ils ne sont pas concernés par la règle ! Pour éviter cela, une astuce consiste à utiliser
+					le mot-clé only que ces vieilles versions ne connaissent pas : 
+					<br />
+					« @media only screen » ne provoquera pas de bug sur les vieux navigateurs.
+				</p>
+				
+				<h2> Plus de details ? </h2>
+				<p>
+					Pour un exemple detaille sur ce changeant, voici comment notre TP peut etre adapter sur des petits ecrans.
+					<br />
+					<a href = "https://openclassrooms.com/courses/apprenez-a-creer-votre-site-web-avec-html5-et-css3/mise-en-page-adaptative-avec-les-media-queries">cours openclassroom</a>
+				</p>
+				
+				<h2> Quelques elements importants </h2>
+				<p>
+					<ul>
+						<li> "width: auto;" : prend toute la place disponible (par defaut) </li>
+						<li> "dsplay: block;" : transforme en block </li>
+						<li> "border-bottom: 0;" supprime la bordure </li>
+						<li> "display: none;" supprime l'element entier </li>
+					</ul>
+					Un nouveau selecteur :"aside p:last-child". Le "aside p" signifie que l'on prend tous les paragraphes a l'interieur de "aside" 
+					et ":last-child" que l'on cible uniquement le dernier paragraphe dans le bloc "aside"
+				</p>
+				
+				<h2> Les mobiles </h2>
+				<p>
+					Pour s'adapter, les navigateurs mobiles affichent le site en « dézoomant », ce qui permet d'avoir un aperçu de l'ensemble de
+					la page. La zone d'affichage simulée est appelée le viewport : c'est la largeur de la fenêtre du navigateur sur le mobile.
+					<br />
+					En CSS, avec les media queries, si vous ciblez l'écran avec "max-width" sur un mobile, celui-ci va comparer la largeur que vous
+					indiquez avec celle de son viewport. Le problème, c'est que le viewport change selon le navigateur mobile utilisé !
+					<br />
+					<img src = "viewport.png" alt = "viewport des mobiles" />
+					<br />
+					Pour cibler les smartphones, plutôt que d'utiliser max-width, il peut être intéressant de recourir à max-device-width : c'est la
+					largeur du périphérique. Les périphériques mobiles ne dépassant pas 480 px de large, on pourra viser uniquement les navigateurs
+					mobiles avec cette media query : "@media all and (max-device-width: 480px)".
+					<br />
+					On ne cible pas avec "handheld" car aucun navigateur mobile a part opera ne le reconnait.
+					<br />
+					On peut modifier la largeur viewport du navigateur mobile avec une balise "meta" a inserer dans l'en-tete "head" du document :
+					<br />
+					"meta name="viewport" content="width=320" /"
+					<br />
+					On peut aussi utiliser cette balise pour modifier ma facon dont le contenu de la page s'organise sue les mobiles. Pour une lecture 
+					facile, on peut demander a ce que le viewport soit le meme que la largeur de l'ecran :
+					<br />
+					"meta name="viewport" content="width=device-width" /"
+				</p>
+			</article>
+		</section>
+		
+		<footer>
+			<p>
+				<a href = "#debut" class = "haut">Haut de page</a>
+			</p>
+			<p>
+				Site d'aide pour codage HTML5 et CSS3 realise par Moi Même.
+			</p>
+			<p class = "accueil">
+				<a href = "test.html"> <img src = "accueil.gif" alt = "accueil" /> </a>
+			</p>
+		</footer>
+		
+	</body>
+</html>

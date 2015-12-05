@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8" />
+		<link rel="stylesheet" href="style.css" />
+		<title> Tableaux </title> 
+	<head>
+	
+	<body>
+		<header>
+			<h1 id = "debut"> Les tableaux </h1>
+		</header>
+		
+		
+		<section>
+			<aside>
+				<nav>
+					<ul>
+						<li> <a href = "test.html"> Accueil </a> </li>
+						<li> <a href = "page.html"> La page </a> </li>
+						<li> <a href = "Dossier/l'autre_page.html"> L'autre page </a> </li>
+						<li> <a href = "liens.html"> Les liens </a> </li>
+						<li> <a href = "deco.html"> Les decorations et la couleur </a> </li>
+						<li> <a href = "fond.html"> Le fond </a> </li>
+						<li> <a href = "bordures.html"> Les bordures </a> </li>
+						<li> <a href = "mise.html"> La mise en page </a> </li>
+						<li> <a href = "boite.html"> Le modele des boites </a> </li>
+						<li> <a href = "position.html"> Le positionnement </a> </li>
+						<li> <a href = "tableaux.html"> Les tableaux </a> </li>
+						<li> <a href = "formulaire.html"> Les formulaires </a> </li>
+						<li> <a href = "video.html"> La video et l'audio </a> </li>
+						<li> <a href = "media.html"> Les media queries </a> </li>
+						<li> <a href = "loin.html"> Pour aller plus loin </a> </li>
+						<li> <a href = "web.html"> Envoyer sur le web </a> </li>
+					</ul>
+				</nav>
+			</aside>
+			
+			<article>
+				<h2> Un tableau simple </h2>
+				<p>
+					La premiere balise a connaitre est "table" et "/table" pour indiquer le debut et la fin d'un tableau. Elle est de type bloc.
+					<br />
+					A l'interieur de cette balise, on met d'autres balises :
+					<br />
+					"tr" et "/tr" pour le debut et la fin d'une ligne, "td" et "/td" pour le debut et la fin d'une colonne.
+					<br />
+					En HTML, on construit le tableau ligne par ligne ou on indique le contenu des differentes colonnes.
+					<img src = "tableau.png" alt = "visualisation du remplissage" />
+					<br />
+					Voici en excusivite pour vous un magnifique tableau :
+					<table>
+						<tr>
+							<td>Bonjour</td>
+							<td>Hello</td>
+							<td>Hola</td>
+							<td>Kon'nichiwa</td>
+						</tr>
+						<tr>
+							<td>Au revoir</td>
+							<td>Good bye</td>
+							<td>Adios</td>
+							<td>Sayonara</td>
+						</tr>
+						<tr>
+							<td>Merci</td>
+							<td>Thank you</td>
+							<td>Gracias</td>
+							<td>Arigato</td>
+						</tr>
+					</table>
+					
+					<br />
+					On met des bords avec "border" en CSS sur les "td" :
+					<table class = "bord1">
+						<tr>
+							<td>Bonjour</td>
+							<td>Hello</td>
+							<td>Hola</td>
+							<td>Kon'nichiwa</td>
+						</tr>
+						<tr>
+							<td>Au revoir</td>
+							<td>Good bye</td>
+							<td>Adios</td>
+							<td>Sayonara</td>
+						</tr>
+						<tr>
+							<td>Merci</td>
+							<td>Thank you</td>
+							<td>Gracias</td>
+							<td>Arigato</td>
+						</tr>
+					</table>
+					
+					<br />
+					Puis on ajoute a "table" "border-collapse" suivi de "collapse" pour fusionner les bordures ou "separate" pour les separer (par defaut).
+					<table class = "bord2">
+						<tr>
+							<td>Bonjour</td>
+							<td>Hello</td>
+							<td>Hola</td>
+							<td>Kon'nichiwa</td>
+						</tr>
+						<tr>
+							<td>Au revoir</td>
+							<td>Good bye</td>
+							<td>Adios</td>
+							<td>Sayonara</td>
+						</tr>
+						<tr>
+							<td>Merci</td>
+							<td>Thank you</td>
+							<td>Gracias</td>
+							<td>Arigato</td>
+						</tr>
+					</table>
+				</p>
+				
+				<p>
+					On definit la ligne d'en-tête comme precedemment dans une ligne de "tr" mais les colonnes sont encadrees de "th" et "/th" et non plus de "td".
+					<br />
+					Avec notre exemple :
+					<table class = "bord2">
+						<tr>
+							<th>Francais</th>
+							<th>Anglais</th>
+							<th>Espagnol</th>
+							<th>Japonais</th>
+						</tr>
+						<tr>
+							<td>Bonjour</td>
+							<td>Hello</td>
+							<td>Hola</td>
+							<td>Kon'nichiwa</td>
+						</tr>
+						<tr>
+							<td>Au revoir</td>
+							<td>Good bye</td>
+							<td>Adios</td>
+							<td>Sayonara</td>
+						</tr>
+						<tr>
+							<td>Merci</td>
+							<td>Thank you</td>
+							<td>Gracias</td>
+							<td>Arigato</td>
+						</tr>
+					</table>
+					Et on n'oublie pas la bordure pour les "th".
+				</p>
+				
+				<p>
+					On definie ensuite le titre du tableau a l'aide de la balise "caption" que l'on place au tout debut, avant l'en-tête.
+					<table class = "bord2">
+						<caption>Vocabulaires du monde</caption>
+						
+						<tr>
+							<th>Francais</th>
+							<th>Anglais</th>
+							<th>Espagnol</th>
+							<th>Japonais</th>
+						</tr>
+						<tr>
+							<td>Bonjour</td>
+							<td>Hello</td>
+							<td>Hola</td>
+							<td>Kon'nichiwa</td>
+						</tr>
+						<tr>
+							<td>Au revoir</td>
+							<td>Good bye</td>
+							<td>Adios</td>
+							<td>Sayonara</td>
+						</tr>
+						<tr>
+							<td>Merci</td>
+							<td>Thank you</td>
+							<td>Gracias</td>
+							<td>Arigato</td>
+						</tr>
+					</table>
+					<br />
+					On peut changer la position du titre avec la propriete CSS "caption-side" suivi de "top" ou "bottom".
+				</p>
+				
+				<h2> Un tableau structure </h2>
+				
+				<p>
+					La premiere methode pour faire des tableaux plus complexe est de les diviser en trois:
+					<ul>
+						<li>en-tête : "thead" et "/thead"</li>
+						<li>Corps du tableau : "tbody" et "/tbody"</li>
+						<li>Pieds de tableau : "tfoot" et "/tfoot"</li>
+					</ul>
+					Voyer par vous même :
+					<img src = "tableau2.png" alt = "schema d'un tableau divise" />
+					<br />
+					Il est conseille d'ecrire les balises dans cette ordre : thead, tfoot, tbody.
+					Reprenons notre exemple precedent :
+					<table class = "bord2">
+						<thead>
+							<tr>
+								<th>Francais</th>
+								<th>Anglais</th>
+								<th>Espagnol</th>
+								<th>Japonais</th>
+							</tr>
+						</thead>
+						
+						<tfoot>
+							<tr>
+								<th>Francais</th>
+								<th>Anglais</th>
+								<th>Espagnol</th>
+								<th>Japonais</th>
+							</tr>
+						</tfoot>
+						
+						<tbody>
+							<tr>
+								<td>Bonjour</td>
+								<td>Hello</td>
+								<td>Hola</td>
+								<td>Kon'nichiwa</td>
+							</tr>
+							<tr>
+								<td>Au revoir</td>
+								<td>Good bye</td>
+								<td>Adios</td>
+								<td>Sayonara</td>
+							</tr>
+							<tr>
+								<td>Merci</td>
+								<td>Thank you</td>
+								<td>Gracias</td>
+								<td>Arigato</td>
+							</tr>
+						</tbody>
+					</table>
+				</p>
+				
+				<p>
+					La deuxieme methode est la FUSION !
+					<br />
+					Le but est de fusionner deux cellule. Pour cela, il faut ajouter un attribut a la balise "td" :
+					<ul>
+						<li>"colspan" pour la fusion de deux colonnes (fusion horizontale)</li>
+						<li>"rowspan" pour la fusion de deux lignes (fusion verticale)</li>
+					</ul>
+					avec comme valeur le nombre de cellules que l'on veut fusionner.
+				</p>
+				
+				<p>
+					On peut modifier l'alignement vertical du texte des cellules de tableaux avec la propriete "vertical-align", c'est la même que pour la mise en page.
+				</p>
+			</article>
+		</section>
+		
+		<footer>
+			<p>
+				<a href = "#debut" class = "haut">Haut de page</a>
+			</p>
+			<p>
+				Site d'aide pour codage HTML5 et CSS3 realise par Moi Même.
+			</p>
+			<p class = "accueil">
+				<a href = "test.html"> <img src = "accueil.gif" alt = "accueil" /> </a>
+			</p>
+		</footer>
+		
+	</body>
+</html>
