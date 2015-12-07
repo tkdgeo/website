@@ -426,7 +426,7 @@ textarea
 		font-weight: bold;
 		border: 1px solid green;
 		margin-bottom: 15px;
-		min-width: 96.5%;
+		min-width: 80%;
 		background: rgba(140,190,140,0.55);
 		border: 1px solid green;
 		box-shadow: 4px 4px 7px green;
@@ -442,7 +442,7 @@ textarea
 	nav li
 	{
 		display: inline-block;
-		width: 48.5%;
+		width: 39.8%;
 		text-align: center;
 		vertical-align: middle;
 	}
