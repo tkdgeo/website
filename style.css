@@ -325,7 +325,75 @@ textarea
 	text-align: center;
 }
 
-@media screen and (max-width: 680px) or (max-device-width: 400px)
+@media screen and (max-width: 680px)
+{
+	h1
+	{
+		color: red;
+		font-family: armalite,Arial;
+		font-size: 3.2em;
+		text-align: center;
+		background: url("route.jpg") no-repeat center;
+		border: 2px solid gray;
+		box-shadow: 3px 3px 7px gray;
+		border-radius: 10px 15px 10px 15px;
+		word-wrap: break-word;
+		text-shadow: 3px 3px 3px rgb(0,0,0);
+	}
+	h2
+	{
+		font-family: action_man, Arial, serif;
+		font-size: 1.6em;
+		color: #b88e54;
+	}
+	h3
+	{
+		font-family: report, Arial, serif;
+		font-size: 1.2em;
+		text-decoration: underline;
+	}
+	aside
+	{
+		font-size: 0.9em;
+		font-weight: bold;
+		border: 1px solid green;
+		margin-bottom: 15px;
+		min-width: 96.5%;
+		background: rgba(140,190,140,0.55);
+		border: 1px solid green;
+		box-shadow: 4px 4px 7px green;
+		border-radius: 7px;
+		word-wrap: break-word;
+	}
+	nav ul
+	{
+		padding: 2%;
+		list-style-type: none;
+		font-size: 1.1em;
+	}
+	nav li
+	{
+		display: inline-block;
+		width: 48.5%;
+		text-align: center;
+		vertical-align: middle;
+	}
+	nav a:hover
+	{	
+		color: #760001;
+		border-bottom: 3px solid #760001;
+	}
+	article
+	{
+		border: 1px solid green;
+		border-radius: 5px;
+		box-shadow: 2px 0px 6px gray;
+		padding: 5px;
+		width: 96%;
+		margin-left: 1%;
+	}
+}
+@media screen (max-device-width: 400px)
 {
 	h1
 	{
