@@ -393,7 +393,7 @@ textarea
 		margin-left: 1%;
 	}
 }
-@media screen (max-device-width: 400px)
+@media all and (max-device-width: 400px)
 {
 	h1
 	{
